@@ -3,9 +3,9 @@
 $ip = $_SERVER['REMOTE_ADDR
 $date = date("l d F H:i:s");
 $browser = $_SERVER['HTTP_USER_AGENT'];
-
 $fp = fopen("ips.txt", "a");
 fputs($fp, "IP: $ip\n  Date: $date\n    User Agent: $browser\n\n\n");
+fclose($fp);
 
 ?>
 <!DOCTYPE HTML>
